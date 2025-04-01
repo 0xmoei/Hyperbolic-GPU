@@ -1,4 +1,5 @@
 # Hyperbolic-GPU
+Step by step guide to Rent and Connect to Hyperbolic GPU servers
 
 ## Create a Public SSH using PowerShell
 ### 1- Open Windows PowerShell
