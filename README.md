@@ -1,9 +1,10 @@
 # Hyperbolic-GPU
 
 ## Create a Public SSH using PowerShell
-1- In Windows Start Menu, Find **Windows PowerShell**, Right click on it and click on Run as Administrator
+### 1- Open Windows PowerShell
+In Windows Start Menu, Find **Windows PowerShell**, Right click on it and click on Run as Administrator
 
-2- In the terminal run:
+### 2- In the terminal run:
 ```bash
 ssh-keygen -t rsa -b 4096
 ```
@@ -14,7 +15,7 @@ Enter file in which to save the key (C:\Users\YourUsername\.ssh\id_rsa):
 ```
 * Press `Enter` to accept the default location (C:\Users\YourUsername\.ssh\id_rsa). This ensures the private key is named id_rsa and the public key is id_rsa.pub.
 
-3- Set a Passphrase (Optional but Recommended)
+### 3- Set a Passphrase (Optional but Recommended)
 * Output will look like:
 ```
 Your identification has been saved in C:\Users\YourUsername\.ssh\id_rsa.
@@ -22,18 +23,18 @@ Your public key has been saved in C:\Users\YourUsername\.ssh\id_rsa.pub.
 The key fingerprint is: SHA256:...
 ```
 
-4- Navigate to `.ssh` directory
+### 4- Navigate to `.ssh` directory
 ```
 cd $env:USERPROFILE\.ssh
 ```
 
-5- Copy the `id_rsa.pub` file content in clipboard
+### 5- Copy the `id_rsa.pub` file content in clipboard
 ```
 Get-Content id_rsa.pub | Set-Clipboard
 ```
 * Your public key is now copied into your `clipboard`
 
-6- Visit [Hyperbolic Setting Dashboard](https://app.hyperbolic.xyz/settings)
+### 6- Visit [Hyperbolic Setting Dashboard](https://app.hyperbolic.xyz/settings)
 Create a new Public SSH key and paste your pubkey into it and save it!
 
 ## Rent a GPU
@@ -55,5 +56,6 @@ ssh ubuntu@xxxxxx.hyperbolic.xyz -p 312452
 ```
 
 ## Connect to GPU server
-* Paste the command you copied in `PowerShell` to access your server
+* Paste the command you copied in `PowerShell` to access your server.
+* Enter the password you set for SSH public key and press enter to open your GPU terminal
 * You can add this flag: `ssh -i $env:USERPROFILE\.ssh\id_rsa` to your command, to specify the ssh privatekey file.
