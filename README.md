@@ -4,7 +4,7 @@
 1- In Windows Start Menu, Find **Windows PowerShell**, Right click on it and click on Run as Administrator
 
 2- In the terminal run:
-```
+```bash
 ssh-keygen -t rsa -b 4096
 ```
 * You'll see:
