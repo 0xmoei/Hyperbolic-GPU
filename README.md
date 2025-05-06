@@ -35,8 +35,10 @@ Get-Content id_rsa.pub | Set-Clipboard
 ```
 * Your public key is now copied into your `clipboard`
 
-### 6- Visit [Hyperbolic Setting Dashboard](https://app.hyperbolic.xyz/settings)
-Create a new Public SSH key and paste your pubkey into it and save it!
+### 6- Create SSH KEY in Hyperbolic
+* Register In [Hyperbolic Dashboard](https://app.hyperbolic.xyz/invite/gqYoHbUk7)
+* then, Visit **SettingsTT
+* Create a new Public SSH key and paste your pubkey into it and save it!
 
 ## Rent a GPU
 * Choose a GPU (.eg RTX 4090) [here](https://app.hyperbolic.xyz/compute) and click on `Rent`
