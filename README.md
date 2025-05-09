@@ -1,7 +1,7 @@
 # Rent and Setup GPU
 Step by step guide to Rent, Setup and Connect to GPU servers.
 
-# Create a Public SSH using PowerShell
+# Step 1. Create a Public SSH using PowerShell
 ### 1- Open Windows PowerShell
 In Windows Start Menu, Find **Windows PowerShell**, Right click on it and click on **Run as Administrator**.
 
@@ -35,7 +35,7 @@ Get-Content id_rsa.pub | Set-Clipboard
 ```
 * Your public key is now copied into your `clipboard`
 
-# Add SSH KEY to GPU Provider Site
+# Step 2. Add SSH KEY to GPU Provider Site
 ### [Vast.ai:](https://cloud.vast.ai/?ref_id=228875)
 * 1- Register in [Vast.ai](https://cloud.vast.ai/?ref_id=228875)
 * 2- Create an SSH key session by going to `three-lines > Keys > SSH Keys` [here](https://cloud.vast.ai/manage-keys/)
@@ -46,7 +46,7 @@ Get-Content id_rsa.pub | Set-Clipboard
 * then, Visit **Settings**
 * Create a new Public SSH key and paste your pubkey into it and save it!
 
-# Rent a GPU
+# Step 3. Rent a GPU
 I use [Vast.ai:](https://cloud.vast.ai/?ref_id=228875) & [Hyperbolic:](https://app.hyperbolic.xyz/invite/gqYoHbUk7) since they have **crypto payments**
 ### [Vast.ai:](https://cloud.vast.ai/?ref_id=228875)
 * 1- Select Pytorch(Vast) template [here](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=PyTorch%20(Vast))
@@ -68,7 +68,7 @@ I use [Vast.ai:](https://cloud.vast.ai/?ref_id=228875) & [Hyperbolic:](https://a
 * 5- By clicking on your gpu instance, if gives you a SSH command to connect to your GPU terminal.
 * 5- Add this flag: `-L 3000:localhost:3000` in front of your Hyperbolic's SSH command, this will allow you to access to port 3000 on your local system.
 
-# Connect to GPU server using SSH Command
+# Step 4. Connect to GPU server using SSH Command
 * You must get a command like this. it's hyperbolic's ssh command for example
 ```
 ssh ubuntu@xxxxxx.hyperbolic.xyz -p 312452
