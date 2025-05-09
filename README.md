@@ -61,4 +61,4 @@ ssh ubuntu@xxxxxx.hyperbolic.xyz -p 312452
 ## Connect to GPU server
 * Paste the command you copied in `PowerShell` to access your server.
 * Enter the password you set for SSH public key and press enter to open your GPU terminal
-* You can add this flag: `ssh -i $env:USERPROFILE\.ssh\id_rsa` to your command, to specify the ssh privatekey file.
+* You can add this flag: `-i $env:USERPROFILE\.ssh\id_rsa` in front of your command, to specify the ssh privatekey file.
