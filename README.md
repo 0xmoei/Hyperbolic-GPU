@@ -47,7 +47,7 @@ Get-Content id_rsa.pub | Set-Clipboard
 * Create a new Public SSH key and paste your pubkey into it and save it!
 
 # Step 3. Rent a GPU
-I use [Vast.ai:](https://cloud.vast.ai/?ref_id=228875) & [Hyperbolic:](https://app.hyperbolic.xyz/invite/gqYoHbUk7) since they have **crypto payments**
+I use [Vast.ai](https://cloud.vast.ai/?ref_id=228875) & [Hyperbolic](https://app.hyperbolic.xyz/invite/gqYoHbUk7) since they have **crypto payments**
 ### [Vast.ai:](https://cloud.vast.ai/?ref_id=228875)
 * 1- Select Pytorch(Vast) template [here](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=PyTorch%20(Vast))
 * 2- Choose a supported GPU (I recommend =24GB GPU vRAM, but Gensyn now supporting even 8GB GPU vRAM)
