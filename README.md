@@ -37,7 +37,7 @@ Get-Content id_rsa.pub | Set-Clipboard
 
 ### 6- Create SSH KEY in Hyperbolic
 * Register In [Hyperbolic Dashboard](https://app.hyperbolic.xyz/invite/gqYoHbUk7)
-* then, Visit **SettingsTT
+* then, Visit **Settings**
 * Create a new Public SSH key and paste your pubkey into it and save it!
 
 ## Rent a GPU
