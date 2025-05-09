@@ -1,9 +1,9 @@
-# Hyperbolic-GPU
-Step by step guide to Rent and Connect to Hyperbolic GPU servers
+# Rent and Setup GPU
+Step by step guide to Rent, Setup and Connect to GPU servers.
 
-## Create a Public SSH using PowerShell
+# Create a Public SSH using PowerShell
 ### 1- Open Windows PowerShell
-In Windows Start Menu, Find **Windows PowerShell**, Right click on it and click on Run as Administrator
+In Windows Start Menu, Find **Windows PowerShell**, Right click on it and click on **Run as Administrator**.
 
 ### 2- In the terminal run:
 ```bash
@@ -35,30 +35,45 @@ Get-Content id_rsa.pub | Set-Clipboard
 ```
 * Your public key is now copied into your `clipboard`
 
-### 6- Create SSH KEY in Hyperbolic
+# Add SSH KEY to GPU Provider Site
+### [Vast.ai:](https://cloud.vast.ai/?ref_id=228875)
+* 1- Register in [Vast.ai](https://cloud.vast.ai/?ref_id=228875)
+* 2- Create an SSH key session by going to `three-lines > Keys > SSH Keys` [here](https://cloud.vast.ai/manage-keys/)
+* 3- Paste Public SSH key created in your local pc in previous steps.
+
+### [Hyperbolic:](https://app.hyperbolic.xyz/invite/gqYoHbUk7)
 * Register In [Hyperbolic Dashboard](https://app.hyperbolic.xyz/invite/gqYoHbUk7)
 * then, Visit **Settings**
 * Create a new Public SSH key and paste your pubkey into it and save it!
 
-## Rent a GPU
-* Choose a GPU (.eg RTX 4090) [here](https://app.hyperbolic.xyz/compute) and click on `Rent`
-* Make sure you select `1` as `GPU Count`
-* Select `pytorch` as `Template`
-* Rent it
+# Rent a GPU
+I use [Vast.ai:](https://cloud.vast.ai/?ref_id=228875) & [Hyperbolic:](https://app.hyperbolic.xyz/invite/gqYoHbUk7) since they have **crypto payments**
+### [Vast.ai:](https://cloud.vast.ai/?ref_id=228875)
+* 1- Select Pytorch(Vast) template [here](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=PyTorch%20(Vast))
+* 2- Choose a supported GPU (I recommend =24GB GPU vRAM, but Gensyn now supporting even 8GB GPU vRAM)
+* 3- Increase `Disk Space` slidebar to `50GB`
+* 4- Top-up credits with crypto and rent it.
+* 5- Go to [instances](https://cloud.vast.ai/instances/), refresh the page, click on `key` button.
+* 6- If you don't see a ssh command in `Direct ssh connect:` section, then you have to press on Add SSH Key.
+* 7- Copy SSH Command, and Replace `-L 3000:localhost:3000` in front of the command.
+* 8- Enter the command in `Windows Powershell` and run it.
+* 9- It prompts you for your ssh public key password (if you set before), then your GPU terminal appears.
 
-![image](https://github.com/user-attachments/assets/aa51051c-f6ed-4a6f-9080-d8247634bfc3)
 
-## Copy the GPU SSH command
-After your server is `Ready to Connect`, just click on `SSH` button as image below to copy the command
+### [Hyperbolic:](https://app.hyperbolic.xyz/invite/gqYoHbUk7)
+* 1- Choose a GPU (.eg RTX 4090) [here](https://app.hyperbolic.xyz/invite/gqYoHbUk7) by going to `Home > GPU List ` and click on `Rent`
+* 2- Make sure you select `1` as `GPU Count`.
+* 3- Select `pytorch` as `Template`.
+* 4- Rent it.
+* 5- By clicking on your gpu instance, if gives you a SSH command to connect to your GPU terminal.
+* 5- Add this flag: `-L 3000:localhost:3000` in front of your Hyperbolic's SSH command, this will allow you to access to port 3000 on your local system.
 
-![image](https://github.com/user-attachments/assets/7662c39f-087c-49d1-b483-ae7a7d6c4616)
-
-* It must copy a command like this:
+# Connect to GPU server using SSH Command
+* You must get a command like this. it's hyperbolic's ssh command for example
 ```
 ssh ubuntu@xxxxxx.hyperbolic.xyz -p 312452
 ```
-
-## Connect to GPU server
+* You can add this flag: `-L 3000:localhost:3000` in front of you command to get access to apps running on port 3000 from your local pc.
 * Paste the command you copied in `PowerShell` to access your server.
-* Enter the password you set for SSH public key and press enter to open your GPU terminal
-* You can add this flag: `-i $env:USERPROFILE\.ssh\id_rsa` in front of your command, to specify the ssh privatekey file.
+* Enter the password you set for SSH public key (if you set before) and press enter to open your GPU terminal
+* Optionaly, you can add this flag: `-i $env:USERPROFILE\.ssh\id_rsa` in front of your command, to specify the ssh privatekey file.
