@@ -14,7 +14,13 @@ ssh-keygen -t rsa -b 4096
 Generating public/private rsa key pair.
 Enter file in which to save the key (C:\Users\YourUsername\.ssh\id_rsa):
 ```
-* Press `Enter` to accept the default location (C:\Users\YourUsername\.ssh\id_rsa). This ensures the private key is named id_rsa and the public key is id_rsa.pub.
+* Press `Enter` to accept the default location.
+
+```
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+```
+* Press `Enter` to bypass setting password.
 
 ### 3- Set a Passphrase (Optional but Recommended)
 * Output will look like:
@@ -24,12 +30,15 @@ Your public key has been saved in C:\Users\YourUsername\.ssh\id_rsa.pub.
 The key fingerprint is: SHA256:...
 ```
 
-### 4- Navigate to `.ssh` directory
+![image](https://github.com/user-attachments/assets/c28fd3f4-99e2-4895-a879-76e914be0567)
+
+
+### 3- Navigate to `.ssh` directory
 ```
 cd $env:USERPROFILE\.ssh
 ```
 
-### 5- Copy the `id_rsa.pub` file content in clipboard
+### 4- Copy the `id_rsa.pub` file content in clipboard
 ```
 Get-Content id_rsa.pub | Set-Clipboard
 ```
