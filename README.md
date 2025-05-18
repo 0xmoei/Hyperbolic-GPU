@@ -2,8 +2,9 @@
 Step by step guide to Rent, Setup and Connect to GPU servers.
 
 # Step 1. Create a Public SSH using PowerShell
-### 1- Open Windows PowerShell
+### 1- Open Windows PowerShell or WSL Ubuntu Terminal
 In Windows Start Menu, Find **Windows PowerShell**, Right click on it and click on **Run as Administrator**.
+
 
 ### 2- In the terminal run:
 ```bash
@@ -21,17 +22,6 @@ Enter passphrase (empty for no passphrase):
 Enter same passphrase again: 
 ```
 * Press `Enter` to bypass setting password.
-
-### 3- Set a Passphrase (Optional but Recommended)
-* Output will look like:
-```
-Your identification has been saved in C:\Users\YourUsername\.ssh\id_rsa.
-Your public key has been saved in C:\Users\YourUsername\.ssh\id_rsa.pub.
-The key fingerprint is: SHA256:...
-```
-
-![image](https://github.com/user-attachments/assets/c28fd3f4-99e2-4895-a879-76e914be0567)
-
 
 ### 3- Navigate to `.ssh` directory
 ```
