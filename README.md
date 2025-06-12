@@ -47,7 +47,9 @@ Get-Content id_rsa.pub | Set-Clipboard
 
 # Step 3. Rent a GPU & Get your GPU's SSH Command
 * I use [Vast.ai](https://cloud.vast.ai/?ref_id=228875) & [Hyperbolic](https://app.hyperbolic.xyz/invite/gqYoHbUk7) since they have **crypto payments**
-* I recommend Vast because of better performance
+* Vast: More GPU avalilability, Supporting VM template (non-dockerized), Cheap GPUs
+* Hyperbolic: Less GPU availability, No VM template, Cheap GPUs
+
 ### [Vast.ai:](https://cloud.vast.ai/?ref_id=228875)
 * 1- Select Pytorch(Vast) template [here](https://cloud.vast.ai/?ref_id=62897&creator_id=62897&name=PyTorch%20(Vast))
 * 2- Choose a supported GPU (I recommend =24GB GPU vRAM, but Gensyn now supporting even 8GB GPU vRAM)
